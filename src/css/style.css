@@ -1,0 +1,376 @@
+
+h1{
+    font-family: 'pacifico','Otomanopee One','Baloo Chettan 2','serif';
+}
+
+body{
+    font-family: 'David Libre','sofia','serif';
+    background: #fefeff;
+}
+
+.e-danger{
+    color:red !important;
+}
+
+.compte{
+    color:#472017;
+    font-size:20px;
+}
+.btn-marron{
+    background:#472017;
+    color:#FFF8F2 !important;
+    padding:10px;
+    border-radius: 5px;
+}
+
+.minHr{
+   width:20%;
+   color:#472017;
+   font-weight: bold;
+   margin:0 auto;
+}
+/*  header
+    color:#472017;
+    color:#FADFCC;
+    color:#FFF8F2;
+    color:#F06970; */
+
+    a i.fab{
+ color:#472017 !important;
+ font-size:25px;
+}
+
+.bg-header
+{
+    background:#FFF8F2 !important;
+
+}
+
+.nav-link:hover{
+   /* text-decoration:overline underline !important;
+    text-decoration-color: #472017 !important;
+    text-decoration-thickness: 4px !important;*/
+    border-bottom:4px solid #472017;
+    padding:0 0;
+   transition:all 500ms ease;
+   
+}
+
+.call{
+    color: #472017;
+    
+}
+
+.call span:hover{
+    background:#472017;
+    color:#FFF8F2;
+    transition:all 500ms ease;
+}
+.call span{
+    
+    border:3px solid #472017;
+   padding:15px;
+}
+
+.header-link
+{
+    margin-right:60px;
+}
+
+.header-link ul li a{
+   text-decoration: none;
+   color:#472017;
+}
+
+/* end header */
+.list-link a
+{
+    text-decoration:none;
+    color:#472017;
+}
+
+.my-link{
+    text-decoration:none;
+    color:#472017;
+}
+/*hero part*/
+ .home-cake{
+     background:url(../images/Gateaux/onlinebg.png);
+     background-size:cover;
+     background-repeat:no-repeat;
+     height:500px;
+ 
+
+     
+ }
+ #hero-main .row{
+    background: rgba(0,0,0,0.7) !important;
+ }
+ .hero 
+ {
+     font-size:80px;
+     color:#FFF8F2;
+     padding:50px;
+    
+ }
+
+ .home-cake a.btn{
+    background:#FFF8F2;
+    padding:15px;
+    width:15%;
+ }
+
+ .home-cake a.btn:hover{
+    background:#FFF8F2
+ }
+
+ #hero-main .row{
+     background: rgba(0,0,0,0.7);
+   
+ }
+/*end*/
+
+/*footer*/
+  .bg-footer{
+      background:rgb(71, 32, 23);
+      color:#FFF8F2;
+  }
+  .bg-footer ul li a{
+      background:#FFF;
+      padding:20px;
+      width:20% !important;
+  }
+
+  .bg-footer .footer--menu  li a
+  {
+    background:none;
+    color:#FFF8F2;
+    text-decoration:none;
+    
+  }
+
+  .col-md-2 span i{
+      font-size:30px;
+  }
+  .bg-footer{
+      overflow: hidden;
+  }
+/*end*/
+
+/*pageList*/
+  .pageList--banner{
+      background:url(../images/Gateaux/GateauxSec.jpg);
+      background-size:cover;
+      height:400px;
+     
+  }
+  .pageList--banner h2{
+    padding:100px;
+  }
+
+ .filigrane
+  {
+     background:rgba(0,0,0,0.3);
+     height:100%;
+     width:100% !important;
+  }
+
+  .pageList--banner  h2{
+      font-size:50px;
+      color:#fff;
+  }
+
+  .card-body{
+      background:#FADFCC;
+      color:#472017;
+  }
+
+  .card-text strong{
+      font-size:20px;
+  }
+/*end*/
+
+/*detail image*/
+.btn-ajouter{
+    background:#472017;
+    color:#FFF8F2 !important;
+}
+
+.btn-retour{
+    background:#F06970;
+    color:#fff !important;
+}
+
+/*end*/
+
+/* page contact */
+.pageContact--banner{
+    background:url(../images/any/bgcontact.png);
+    background-size:cover;
+    height:300px;
+   
+}
+
+.pageContact--banner h2{
+    padding:100px;
+  }
+
+  iframe
+  {
+     width:100%;
+     padding:20px;
+  }
+
+  #pageContact .form--group .col-md-6
+  {
+     margin-left:-5px;
+  }
+
+.table-contact{
+    padding:20px;
+}
+
+table{
+    margin-top:120px;
+    font-size:15px;
+    
+}
+
+table td{
+    text-align:center;
+    border:0;
+}
+
+table tr{
+    margin-top:5px;
+
+}
+
+#pageContact ul li{
+    list-style: none;
+   margin:5px;
+}
+
+#pageContact ul{
+    padding:50px;
+    font-size:17px;
+}
+
+#pageContact ul li i{
+   font-size: 40px;
+   color:#472017;
+}
+
+#pageContact h2{
+    color:#FFF;
+    font-size:50px;
+}
+/* end*/
+
+/* about*/
+#pageAbout .col-md-6 img{
+    float:left;
+}
+/*end*/
+
+/*login*/
+.delivery img{
+    padding:20px;
+}
+/*end*/
+
+/*signup*/
+#bg-signup{
+    background: url(../images/any/bgsignup.jpg);
+    background-size:cover;
+     background-repeat: no-repeat;
+     height:100vh;
+     background-position: top;
+     overflow: hidden;
+ 
+}
+
+#signup form input{
+  border:none !important;
+  border-bottom:1px solid #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+/*end*/
+
+@media screen and (max-width: 768px){
+h1{
+      text-align: center;
+   }
+
+.form-detail{
+    text-align:center;
+}
+.hero 
+{
+    font-size:60px;
+    color:#FFF8F2;
+    padding:20px 50px;
+    text-align: center;
+
+}
+.home-cake a.btn{
+    background:#FFF8F2;
+    padding:15px;
+    width:30%;
+    border-radius: 50px;;
+ }
+
+.home-info{
+    text-align: center;
+}
+
+.bg-footer{
+    text-align:center;
+}
+.menu-header{
+    text-align: center;
+}
+li .list-inline-item.twitter{
+    margin:10px !important;
+}
+
+
+.nav-link:hover{
+   border-bottom:inherit;
+    padding:inherit;
+    transition:none;
+    
+ }
+
+ .filigrane h2{
+     font-size:60px;
+     text-align: center;
+ }
+ table{
+float:left;
+ }
+ .pageContact--banner h2{
+    text-align: center;
+ }
+
+ #contact{
+     display:inherit !important;
+ }
+
+ #table-i{
+    display:none !important;
+}
+
+ #pageContact ul li{
+    list-style: none;
+   margin:inherit;
+   text-align:justify;
+}
+
+}
+
+@media screen and (max-width: 576px)
+{
+   
+}
