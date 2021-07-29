@@ -3,7 +3,7 @@
 include "header.php";
 $total=0;
 $error="";
-var_dump($_SESSION);
+
 if(isset($_POST['valider'])){
   if($_SESSION['username']!=null){
     header("location:validerPanier");
