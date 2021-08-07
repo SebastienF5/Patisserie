@@ -50,14 +50,14 @@ class CustomerManager
     public function updateUser(Customer $cust)
     {
         $q=$this->_db->prepare('UPDATE customers SET pseudo=:pseudo,firstname=:firstname,
-        lastname=:lastname,sexe=:sexe,email=:email,password=:password,tel=:tel,image=:image WHERE id=:id');
+        lastname=:lastname,sexe=:sexe,email=:email,tel=:tel,image=:image WHERE id=:id');
 
         $q->bindValue(':pseudo',$cust->pseudo());
         $q->bindValue(':firstname',$cust->firstname());
         $q->bindValue(':lastname',$cust->lastname());
         $q->bindValue(':sexe',$cust->sexe());
         $q->bindValue(':email',$cust->email());
-        $q->bindValue(':password',$cust->password());
+       // $q->bindValue(':password',$cust->password());
         $q->bindValue(':tel',$cust->tel());
         $q->bindValue(':image',$cust->image());
         $q->bindValue(':id',$cust->id());
@@ -107,4 +107,51 @@ class CustomerManager
         }
         return false;
      }
+
+     /**
+      * fonction permettant de selectionner un user par username 
+      *@return tableau de donnees 
+      */
+
+      public function getUserbyUsername($username)
+      {
+  
+         $q=$this->_db->prepare('SELECT * FROM customers WHERE pseudo=:username');
+         $q->bindValue(':username',$username);
+         $q->execute();
+
+         $donnees=$q->fetch(PDO::FETCH_ASSOC);
+             return $donnees;
+      }
+
+      /**
+       * fonction pour verifier si un pseudo est deja dans la BD
+       * @return bool
+       */
+
+      public function getPseudo($pseudo):bool
+      {
+          $data=[];
+         $q=$this->_db->prepare('SELECT pseudo,password FROM customers WHERE pseudo=:pseudo');
+         $q->bindValue(':pseudo',$pseudo);
+     
+ 
+          $q->execute();
+         
+         while($donnees=$q->fetch(PDO::FETCH_ASSOC)){
+             
+             if($donnees['pseudo']==$pseudo)
+             {
+               
+                    return true;
+             }
+         }
+         return false;
+      }
 }
+
+/**
+ * fonction pour autoriser changement de password
+ * l'utilisateur doit confirmer un password envoyer par email
+ * @return 
+ */
