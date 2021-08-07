@@ -298,6 +298,18 @@ table tr{
 }
 /*end*/
 
+/* profil page */
+ .block-3{
+     margin-left:70px !important;
+     height:400px;
+ }
+
+ .img-profil{
+     width:60%;
+     height:180px;
+ }
+/*end*/
+
 @media screen and (max-width: 768px){
 h1{
       text-align: center;
@@ -366,6 +378,13 @@ float:left;
     list-style: none;
    margin:inherit;
    text-align:justify;
+}
+
+.block-3{
+margin-top:40px;
+    margin-left:0 !important;
+    height:400px;
+   
 }
 
 }
