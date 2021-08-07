@@ -1,5 +1,11 @@
 <?php
   session_start();
+  $data=new DataLayer();
+ $user=new CustomerManager($data->getConnection());
+ if(isset($_SESSION['username']))
+ {
+    $userInfo=$user->getUserbyUsername($_SESSION['username']);
+ }
 
 ?>
 <div class="container-fluid text-center bg-header">
@@ -60,11 +66,9 @@
          
       </ul>
        <div class="profil col-md-6 text-center">
-        <?php 
-        if(isset($_SESSION['username']))
-        echo "'<a href='profil'>".$_SESSION["username"]."</a>";
-
-        ?>
+   
+      <p style="<?php if(!isset($userInfo)){echo "display:none !important";} ?>"><a href='profil'><img src="uploads/<?=$userInfo['image']?>" class=" rounded-circle p-2 shadow-sm" style="height:60px; width:10%"></a></p>
+             
        </div>
     <div class="header-link">
 
