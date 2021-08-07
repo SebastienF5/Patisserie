@@ -1,6 +1,6 @@
 <?php
 
-$error_password=$error_email=$error_pseudo=$error_img="";
+$error_password=$error_email=$error_pseudo=$error_img=$error_pseudo="";
 $msg="";
 $username=$email=$pass=$cpass="";
 $password=$cp="";
@@ -64,6 +64,11 @@ if(empty($password)){
  $succes=false;
 }
 
+if($customer->getPseudo($username)){
+  $error_pseudo="Desole,Ce pseudo est deja sur le systeme!";
+  $succes=false;
+}
+
 if($succes){
 
 
@@ -83,6 +88,8 @@ $customer->insertUser(
 );
 
 $msg="Enregistrer Avec Succes";
+$username=$email=$pass=$cpass="";
+header("Location:signup");
 }
 
 }
@@ -96,30 +103,30 @@ $msg="Enregistrer Avec Succes";
         </div>
         <div class="col-md-7 p-3">
          <h1>S'inscrire</h1>
-    <form method="post" action="">
+    <form method="post" action="" enctype="multipart/form-data">
     
     <div class="mb-3 text-left">
     <label for="exampleInputspeudo" class="form-label">pseudo</label>
-    <input type="text" class="form-control" name="pseudo">
+    <input type="text" class="form-control" name="pseudo" value="<?php if($username!=null){echo $username;}?>">
     <div id="pseudoHelp" class="form-text e-danger"><?php if($error_pseudo!=null){echo $error_pseudo;}?></div>
   </div>
 <div class="mb-3 text-left">
     <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value="<?php if($email!=null){echo $email;}?>">
     <div id="emailHelp" class="form-text e-danger"><?php if($error_email!=null){echo $error_email;}?></div>
   </div>
   <div class="mb-3 ">
     <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-    <input type="password" class="form-control" id="exampleInputPassword1"name="password">
+    <input type="password" class="form-control" id="exampleInputPassword1"name="password" value="<?php if($password!=null){echo $password;}?>">
     <div id="passwordHelp" class="form-text e-danger"><?php if($error_password!=null){echo $error_password;}?></div>
   </div>
   <div class="mb-4">
     <label for="exampleInputPassword1" class="form-label">Confirmer Mot de passe</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" name="confirm_password">
+    <input type="password" class="form-control" id="exampleInputPassword1" name="confirm_password" value="<?php if($cp!=null){echo $cp;}?>">
   </div>
   <div class="mb-3">
- 
-    <input type="file" class="form-control" name="photo">
+  <label for="exampleInputfile" class="form-label">   </label>
+    <input type="file" class="form-control" name="photo" >
     <div id="FileHelp" class="form-text"><?php if($error_img!=null){echo $error_image;}?></div>
   </div>
   <input type="submit" class="btn btn-marron pull-right" name="envoyer">
